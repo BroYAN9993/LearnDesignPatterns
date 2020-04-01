@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 
 namespace LearnDesignPatterns.Patterns.FactoryPattern
 {
@@ -17,19 +18,11 @@ namespace LearnDesignPatterns.Patterns.FactoryPattern
             };
             foreach (var s in cars) Log(s);
         }
-        private string Log(ICar car)
+        private static void Log(ICar car)
         {
-            var name = car.GetName();
-            if (name == null)
-            {
-                Console.WriteLine($"[Car Factory Info] This car product failed");
-            }
-            else
-            {
-                Console.WriteLine($"[Car Factory Info] This car is {name}");
-            }
-
-            return name;
+            Console.WriteLine(car == null
+                ? $"[Car Factory Info] This car product failed"
+                : $"[Car Factory Info] This car is {car.GetName()}");
         }
     }
 }

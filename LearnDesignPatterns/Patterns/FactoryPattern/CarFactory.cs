@@ -6,7 +6,7 @@ namespace LearnDesignPatterns.Patterns.FactoryPattern
         {
             return carType switch
             {
-                "BMW" => (ICar) new BMW420i(),
+                "BMW" => new BMW420i(),
                 "TESLA" => new TeslaModel3(),
                 _ => null
             };

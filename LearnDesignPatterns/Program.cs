@@ -1,4 +1,5 @@
 ﻿using System;
+using LearnDesignPatterns.Patterns.AbstractFactoryPattern;
 using LearnDesignPatterns.Patterns.FactoryPattern;
 
 namespace LearnDesignPatterns
@@ -9,6 +10,8 @@ namespace LearnDesignPatterns
         {
             var factoryPatternExecutor = new FactoryPatternExecutor();
             factoryPatternExecutor.Execute();
+            var abstractFactoryExecutor = new AbstractFactoryExecutor();
+            abstractFactoryExecutor.Execute();
         }
     }
 }
