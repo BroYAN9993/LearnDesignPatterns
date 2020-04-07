@@ -1,6 +1,7 @@
 ﻿using System;
 using LearnDesignPatterns.Patterns.AbstractFactoryPattern;
 using LearnDesignPatterns.Patterns.FactoryPattern;
+using LearnDesignPatterns.Patterns.SingletonPattern;
 
 namespace LearnDesignPatterns
 {
@@ -12,6 +13,8 @@ namespace LearnDesignPatterns
             factoryPatternExecutor.Execute();
             var abstractFactoryExecutor = new AbstractFactoryExecutor();
             abstractFactoryExecutor.Execute();
+            var singletonPatternExecutor = new SingletonPatternExecutor();
+            singletonPatternExecutor.Execute();
         }
     }
 }
